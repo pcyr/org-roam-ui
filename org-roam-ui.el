@@ -181,12 +181,13 @@ This serves the web-build and API over HTTP."
    ;;; check if the default keywords actually exist on `orb-preformat-keywords'
    ;;; else add them
     (setq-local httpd-port org-roam-ui-port)
+    (setq httpd-host "0.0.0.0")
     (setq httpd-root org-roam-ui-app-build-dir)
     (httpd-start)
     (setq org-roam-ui-ws-server
           (websocket-server
            35903
-           :host 'local
+           :host "0.0.0.0"
            :on-open #'org-roam-ui--ws-on-open
            :on-message #'org-roam-ui--ws-on-message
            :on-close #'org-roam-ui--ws-on-close))

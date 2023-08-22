@@ -75,7 +75,7 @@ export const initialVisuals = {
   highlight: true,
   highlightNodeSize: 1.1,
   highlightLinkSize: 0.7,
-  highlightFade: 0.8,
+  highlightFade: 0.5,
   highlightAnim: true,
   animationSpeed: 360,
   algorithmOptions: options,

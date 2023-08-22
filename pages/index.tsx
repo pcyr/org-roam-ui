@@ -430,7 +430,7 @@ export function GraphPage() {
 
   useEffect(() => {
     // initialize websocket
-    WebSocketRef.current = new ReconnectingWebSocket('ws://localhost:35903')
+    WebSocketRef.current = new ReconnectingWebSocket(`ws://${window.location.hostname}:35903`)
     WebSocketRef.current.addEventListener('open', () => {
       console.log('Connection with Emacs established')
     })
