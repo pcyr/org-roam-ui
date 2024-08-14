@@ -170,8 +170,8 @@ const FilterPanel = (props: FilterPanelProps) => {
           label="Number of neighbors in local graph"
           value={local.neighbors}
           onChange={(v) => setLocal({ ...local, neighbors: v })}
-          min={1}
-          max={5}
+          min={3}
+          max={30}
           step={1}
         />
       </VStack>

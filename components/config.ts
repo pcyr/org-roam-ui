@@ -27,17 +27,17 @@ export const initialPhysics = {
   alphaTarget: 0,
   alphaMin: 0,
   velocityDecay: 0.25,
-  gravity: 0.3,
+  gravity: 0.24,
   gravityOn: true,
   gravityLocal: false,
 }
 
 export const initialFilter = {
   orphans: false,
-  dailies: false,
-  parent: 'heading',
+  dailies: true,
+  parent: 'file',
   filelessCites: false,
-  tagsBlacklist: [],
+  tagsBlacklist: ['fleeting'],
   tagsWhitelist: [],
   dirsBlocklist: [],
   dirsAllowlist: [],
@@ -120,7 +120,7 @@ export interface TagColors {
 }
 
 export const initialBehavior = {
-  follow: 'zoom',
+  follow: 'color',
   localSame: 'add',
   zoomPadding: 200,
   zoomSpeed: 2000,
@@ -128,10 +128,10 @@ export const initialBehavior = {
 
 export const initialMouse = {
   highlight: 'hover',
-  local: 'double',
-  follow: 'never',
+  local: 'right',
+  follow: 'click',
   context: 'right',
-  preview: 'click',
+  preview: 'none',
   backgroundExitsLocal: false,
 }
 
